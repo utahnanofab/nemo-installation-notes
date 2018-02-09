@@ -16,4 +16,8 @@ django-admin collectstatic
 wget https://raw.githubusercontent.com/utahnanofab/nemo-installation-notes/master/helper-scripts/nemo-fixtures.json
 django-admin loaddata nemo-fixtures.json
 
+#add fake auth engine
+wget -O /home/nemo/python/lib/python3.6/site-packages/NEMO/views/fake_authentication.py https://raw.githubusercontent.com/utahnanofab/nemo-installation-notes/master/helper-scripts/fake_authentication.py
+
+
 # gunicorn -b 0.0.0.0:8000 NEMO.wsgi:application

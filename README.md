@@ -75,6 +75,7 @@ Login as the nemo user and open a terminal so we can install NEMO and its depend
 
 I am installing NEMO at a specific commit in case later versions require different steps:
 ```
+cd /home/nemo
 pip3 install git+https://github.com/usnistgov/NEMO.git@b219bba1166b893b4223d23ed3383fbf54e77fc5 gunicorn
 ```
 
@@ -96,7 +97,7 @@ django-admin migrate
 django-admin collectstatic
 ```
 
-Here you might create a super user with "django-admin createsuperuser", but I'm actually going to skip that step and import a bunch of test data that includes a super user.
+Here you might create a super user with "django-admin createsuperuser", but I'm actually going to skip that step and import a bunch of test data that includes a super user:
 
 ```
 wget https://raw.githubusercontent.com/utahnanofab/nemo-installation-notes/master/helper-scripts/nemo-fixtures.json
