@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd /home/nemo
+. ~/.profile
 
 pip3 install git+https://github.com/usnistgov/NEMO.git@b219bba1166b893b4223d23ed3383fbf54e77fc5 gunicorn
 mkdir /home/nemo/{email,media,secrets,logs,nginx,static}
