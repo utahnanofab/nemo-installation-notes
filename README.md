@@ -50,8 +50,10 @@ DJANGO_SETTINGS_MODULE=settings
 export PATH PYTHONPATH DJANGO_SETTINGS_MODULE' >> /home/nemo/.profile
 
 . /home/nemo/.profile
+```
 
-Make nemo user login automatically, and give nemo sudo powers (unsafe, but convenient):
+Make nemo user login automatically, and give nemo sudo powers (this part is unnecessary, but convenient for working in the VM):
+
 ```
 # SET nemo as default user and automatically login as nemo when rebooted
 echo '[Seat:*]
