@@ -1,1 +1,66 @@
-# nemo-installation-notes
+# Nemo Installation Notes
+
+I put together some notes on getting a development version of
+NEMO up and running.  Thought I would share those notes for 
+anyone who might find them useful.  Most of the information 
+comes directly from the NEMO repo (https://github.com/usnistgov/NEMO).
+
+A note on security: I am not following security measures for this setup. I only am getting it up and running for testing purposes.
+
+## Step 1. Setup Ubuntu 16.04 in a VM (VirtualBox)
+
+I downloaded a pre-installed ubuntu virtual machine from osboxes.org:
+
+https://www.osboxes.org/ubuntu/
+
+default username/password is osboxes/osboxes.org
+
+## Step 2. Login and Install Prerequisites
+
+After logging in, install prerequisites with apt in terminal window:
+```
+sudo su #become root user
+apt-get update
+apt-get install -y zlib1g-dev git curl vim gcc wget sqlite3 openssl git unzip build-essential checkinstall \
+                        libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+```
+
+Create "nemo" user (with "nemo" password) for running NEMO:
+```
+useradd -m -s /bin/bash --comment "NEMO" nemo
+echo nemo:nemo | chpasswd
+```
+
+Install python as nemo user into nemo user's home directory:
+```
+su nemo - # become nemo
+cd /home/nemo
+wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tgz
+tar xf Python-3.6.4.tgz
+cd Python-3.6.4/
+./configure --prefix=/home/nemo/python
+make
+make install
+cd /home/nemo
+rm -rf Python-3.6.4 Python-3.6.4.tgz
+
+echo 'PATH=/home/nemo/python/bin:/home/nemo/nginx:$PATH
+PYTHONPATH=/home/nemo
+DJANGO_SETTINGS_MODULE=settings
+export PATH PYTHONPATH DJANGO_SETTINGS_MODULE' >> /home/nemo/.profile
+
+. /home/nemo/.profile
+
+Make nemo user login automatically, and give nemo sudo powers (unsafe, but convenient):
+```
+# SET nemo as default user and automatically login as nemo when rebooted
+echo '[Seat:*]
+autologin-user=nemo
+' > /etc/lightdm/lightdm.conf
+
+gpasswd -a nemo nopasswdlogin
+
+# DON'T REQUIRE PASSWORD TO USE SUDO
+echo 'nemo ALL=NOPASSWD: ALL' |  EDITOR='tee -a' visudo
+
+```
