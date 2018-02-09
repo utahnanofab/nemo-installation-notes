@@ -48,3 +48,4 @@ EOF
 
 # RUN SHELL SCRIPT
 su nemo - -c 'sh /tmp/runasnemo.sh'
+

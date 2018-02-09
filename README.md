@@ -17,6 +17,8 @@ default username/password is osboxes/osboxes.org
 
 ## Step 2. Login and Install Prerequisites
 
+*This step can be run automatically with script: https://raw.githubusercontent.com/utahnanofab/nemo-installation-notes/master/helper-scripts/step-02-login-and-install-prerequisites.sh*
+
 After logging in, install prerequisites with apt in terminal window:
 ```
 sudo su #become root user
