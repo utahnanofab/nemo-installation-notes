@@ -81,7 +81,7 @@ pip3 install git+https://github.com/usnistgov/NEMO.git@b219bba1166b893b4223d23ed
 
 Create directory structure and secret key:
 ```
-mkdir /home/nemo/{email,media,secrets,logs,nginx,static}
+mkdir email media secrets logs nginx static
 nemo generate_secret_key > secrets/django_secret_key.txt
 ```
 
