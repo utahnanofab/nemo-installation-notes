@@ -88,3 +88,13 @@ Download settings template (with insecure authentication backend settings)
 ```
 wget -q -O - https://raw.githubusercontent.com/utahnanofab/nemo-installation-notes/master/helper-scripts/settings.template.py > settings.py
 ```
+
+Create migrations and collect static file assets:
+```
+django-admin makemigrations NEMO
+django-admin migrate
+django-admin collectstatic
+```
+
+Here you might create a super user with "django-admin createsuperuser", but I'm actually going to skip that step and import a bunch of test data that includes a super user.
+
