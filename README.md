@@ -76,6 +76,7 @@ Login as the nemo user and open a terminal so we can install NEMO and its depend
 I am installing NEMO at a specific commit in case later versions require different steps:
 ```
 cd /home/nemo
+source ~/.profile #(load environment variables)
 pip3 install git+https://github.com/usnistgov/NEMO.git@b219bba1166b893b4223d23ed3383fbf54e77fc5 gunicorn
 ```
 
