@@ -22,3 +22,6 @@ wget -O /home/nemo/python/lib/python3.6/site-packages/NEMO/views/fake_authentica
 
 
 # gunicorn -b 0.0.0.0:8000 NEMO.wsgi:application
+
+# run in dev mode:
+python3 /home/nemo/python/lib/python3.6/site-packages/NEMO/manage.py runserver
