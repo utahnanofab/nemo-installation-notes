@@ -71,6 +71,8 @@ echo 'nemo ALL=NOPASSWD: ALL' |  EDITOR='tee -a' visudo
 
 ## Step 3. Set up the NEMO app
 
+*This step can be run automatically with script: https://raw.githubusercontent.com/utahnanofab/nemo-installation-notes/master/helper-scripts/step-03-setup-nemo-app.sh (run as nemo user)*
+
 Login as the nemo user and open a terminal so we can install NEMO and its dependencies using pip:
 
 I am installing NEMO at a specific commit in case later versions require different steps:
