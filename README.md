@@ -98,3 +98,16 @@ django-admin collectstatic
 
 Here you might create a super user with "django-admin createsuperuser", but I'm actually going to skip that step and import a bunch of test data that includes a super user.
 
+```
+wget https://raw.githubusercontent.com/utahnanofab/nemo-installation-notes/master/helper-scripts/nemo-fixtures.json
+django-admin loaddata nemo-fixtures.json
+
+```
+
+Add an authenticator to the application that allows any user to login with any password.  Obviously, this is very insecure, but it allows us to get up and running for testing purposes.  Later, this should be changed to a normal auth backend.
+
+This backend has already been set up as the default authentication engine in the settings.py file we downloaded earlier.
+```
+wget -O /home/nemo/python/lib/python3.6/site-packages/NEMO/views/fake_authentication.py https://raw.githubusercontent.com/utahnanofab/nemo-installation-notes/master/helper-scripts/fake_authentication.py
+```
+

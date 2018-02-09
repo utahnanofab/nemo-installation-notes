@@ -12,4 +12,8 @@ django-admin migrate
 django-admin collectstatic
 # django-admin createsuperuser
 
+#create admin user and load other test data
+wget https://raw.githubusercontent.com/utahnanofab/nemo-installation-notes/master/helper-scripts/nemo-fixtures.json
+django-admin loaddata nemo-fixtures.json
+
 # gunicorn -b 0.0.0.0:8000 NEMO.wsgi:application
