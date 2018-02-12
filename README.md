@@ -23,6 +23,11 @@ https://www.osboxes.org/ubuntu/
 
 default username/password is osboxes/osboxes.org
 
+You may want to install virtualbox guest additions to get shared clipboard 
+and other features by running "sudo apt-get install virtualbox-guest-additions-iso"
+and then reboot.
+
+
 ## Step 2. Login and Install Prerequisites
 
 *This step can be run automatically with script: https://raw.githubusercontent.com/utahnanofab/nemo-installation-notes/master/helper-scripts/step-02-login-and-install-prerequisites.sh*
