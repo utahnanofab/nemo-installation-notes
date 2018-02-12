@@ -49,4 +49,4 @@ reboot
 
 }
 
-main | tee -a /var/tmp/nemo-install-log.txt
+main 2>&1 | tee /var/tmp/nemo-install-log.txt
