@@ -29,3 +29,14 @@ echo 'Step 04
 
 . ./step-04-create-icon.sh
 
+echo 'Step 05
+======================
+
+Rebooting in 20 seconds'
+for i in 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1
+do
+  sleep 1
+  echo "Rebooting in $i seconds"
+done
+
+reboot
