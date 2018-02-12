@@ -22,12 +22,14 @@ echo 'Step 02
 echo 'Step 03
 ======================'
 
-. ./step-03-setup-nemo-app.sh
+chmod 755 ./step-03-setup-nemo-app.sh
+su - nemo -c ./step-03-setup-nemo-app.sh
 
 echo 'Step 04
 ======================'
 
-. ./step-04-create-icon.sh
+chmod 755 ./step-04-create-icon.sh
+su - nemo -c ./step-04-create-icon.sh
 
 echo 'Step 05
 ======================
