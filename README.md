@@ -3,7 +3,8 @@
 I put together some notes on getting a development version of
 NEMO up and running.  Thought I would share those notes for 
 anyone who might find them useful.  Most of the information 
-comes directly from the NEMO repo (https://github.com/usnistgov/NEMO).
+comes directly from the NEMO repo (https://github.com/usnistgov/NEMO). 
+This was all done inside of a virtualbox virtual machine.
 
 A note on security: I am not following proper security measures for this setup. I only am getting it up and running for testing purposes.
 
