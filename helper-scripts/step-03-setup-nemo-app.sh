@@ -26,6 +26,16 @@ wget -O /home/nemo/python/lib/python3.6/site-packages/NEMO/views/fake_authentica
 # run in dev mode:
 python3 /home/nemo/python/lib/python3.6/site-packages/NEMO/manage.py runserver &
 
+clear
+
+echo '
+###################################################################
+###                                                             ###
+### Running NEMO, open firefox to http://localhost:8000/        ###
+###                                                             ###
+###################################################################
+'
+
 # start firefox:
 firefox http://localhost:8000
 

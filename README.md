@@ -5,7 +5,7 @@ NEMO up and running.  Thought I would share those notes for
 anyone who might find them useful.  Most of the information 
 comes directly from the NEMO repo (https://github.com/usnistgov/NEMO).
 
-A note on security: I am not following security measures for this setup. I only am getting it up and running for testing purposes.
+A note on security: I am not following proper security measures for this setup. I only am getting it up and running for testing purposes.
 
 ## Step 1. Setup Ubuntu 16.04 in a VM (VirtualBox)
 
