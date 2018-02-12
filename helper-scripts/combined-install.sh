@@ -1,9 +1,13 @@
 #!/bin/bash
 
+set -e
+
 if [[ $EUID -ne 0 ]]; then
    echo "This script must be run as root" 
    exit 1
 fi
+
+main() {
 
 cd /tmp
 
@@ -22,23 +26,27 @@ echo 'Step 02
 echo 'Step 03
 ======================'
 
+cd /tmp
 chmod 755 ./step-03-setup-nemo-app.sh
 su - nemo -c ./step-03-setup-nemo-app.sh
 
 echo 'Step 04
 ======================'
 
+cd /tmp
 chmod 755 ./step-04-create-icon.sh
 su - nemo -c ./step-04-create-icon.sh
 
 echo 'Step 05
-======================
-
-Rebooting in 20 seconds'
-for i in 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1
+======================'
+for i in 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1
 do
   sleep 1
   echo "Rebooting in $i seconds"
 done
 
 reboot
+
+}
+
+main | tee -a /var/tmp/nemo-install-log.txt
