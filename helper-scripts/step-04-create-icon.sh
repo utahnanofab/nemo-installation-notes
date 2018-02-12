@@ -1,3 +1,7 @@
+#!/bin/bash
+
+mkdir -p ~/.config/autostart ~/Desktop
+
 echo '[Desktop Entry]
 Version=1.0
 Type=Application
@@ -17,7 +21,6 @@ Icon='
 > ~/Desktop/firefox-nemo.desktop
 
 chmod 755 ~/Desktop/nemo.desktop ~/Desktop/firefox-nemo.desktop
-mkdir -p ~/.config/autostart
 
 
 cp ~/Desktop/nemo.desktop ~/Desktop/firefox-nemo.desktop ~/.config/autostart
