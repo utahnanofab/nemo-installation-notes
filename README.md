@@ -12,6 +12,9 @@ A note on security: I am not following proper security measures for this setup. 
 
 If you want to automate these steps, [I created a script](https://raw.githubusercontent.com/utahnanofab/nemo-installation-notes/master/helper-scripts/combined-install.sh) that can be run inside of the ubuntu 16.04 virtualbox image available from osboxes.org.
 
+Alternatively, download this virtualbox hard disk image with NEMO pre-installed (with insecure settings--for development and testing only):
+
+https://drive.google.com/open?id=1yDn8NVIyX4yjf9GeNCeSH9LqJzITj5I6
 
 ## Step 1. Setup Ubuntu 16.04 in a VM (VirtualBox)
 
