@@ -28,14 +28,14 @@ echo 'Step 03
 
 cd /tmp
 chmod 755 ./step-03-setup-nemo-app.sh
-su - nemo -c ./step-03-setup-nemo-app.sh
+su nemo - -c ./step-03-setup-nemo-app.sh
 
 echo 'Step 04
 ======================'
 
 cd /tmp
 chmod 755 ./step-04-create-icon.sh
-su - nemo -c ./step-04-create-icon.sh
+su nemo - -c ./step-04-create-icon.sh
 
 echo 'Step 05
 ======================'
