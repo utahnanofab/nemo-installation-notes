@@ -14,6 +14,7 @@ useradd -m -s /bin/bash --comment "NEMO" nemo
 echo nemo:nemo | chpasswd
 
 # SET nemo as default user and automatically login as nemo when rebooted
+mkdir -p /etc/lightdm
 echo '[Seat:*]
 autologin-user=nemo
 ' > /etc/lightdm/lightdm.conf
