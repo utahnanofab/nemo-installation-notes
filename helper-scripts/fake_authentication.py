@@ -8,10 +8,8 @@ class AllowAnyPasswordBackend:
 
     def authenticate(self, username=None, password=None):
         User = get_user_model()
-        return User.objects.get(username=username)
         try:
-            user = User.objects.get(username=username)
-            return user
+            return User.objects.get(username=username)
         except User.DoesNotExist:
             return None
 
