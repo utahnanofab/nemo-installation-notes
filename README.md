@@ -38,6 +38,10 @@ apt-get install -y zlib1g-dev git curl vim gcc wget sqlite3 openssl git unzip bu
                         libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
 ```
 
+If using the osboxes.org ubuntu image, I noticed you may have to manually remove a lock from apt before the above command will work.  If you get an error about a lock file, you may need to run:
+
+    rm /var/lib/apt/lists/lock /var/cache/apt/archives/lock /var/lib/dpkg/lock
+
 Create "nemo" user (with "nemo" password) for running NEMO:
 ```
 useradd -m -s /bin/bash --comment "NEMO" nemo
