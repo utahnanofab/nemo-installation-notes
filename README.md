@@ -115,3 +115,13 @@ This backend has already been set up as the default authentication engine in the
 wget -O /home/nemo/python/lib/python3.6/site-packages/NEMO/views/fake_authentication.py https://raw.githubusercontent.com/utahnanofab/nemo-installation-notes/master/helper-scripts/fake_authentication.py
 ```
 
+Run the development web server that is included with django, and start firefox:
+```
+# run in dev mode:
+python3 /home/nemo/python/lib/python3.6/site-packages/NEMO/manage.py runserver &
+
+# start firefox:
+firefox http://localhost:8000
+```
+
+Now login with username "admin" and any password.
