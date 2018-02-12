@@ -16,6 +16,10 @@ Alternatively, download this virtualbox hard disk image with NEMO pre-installed 
 
 https://drive.google.com/open?id=1yDn8NVIyX4yjf9GeNCeSH9LqJzITj5I6
 
+or this smaller image without a GUI:
+
+https://drive.google.com/open?id=1_0dgY4FhQpprc4MAFk1dVXzgoLhe6YKQ
+
 ## Step 1. Setup Ubuntu 16.04 in a VM (VirtualBox)
 
 I downloaded a pre-installed ubuntu virtual machine from osboxes.org:
