@@ -13,7 +13,7 @@ Icon=' > ~/Desktop/nemo.desktop
 echo '[Desktop Entry]
 Version=1.0
 Type=Application
-Terminal=true
+Terminal=false
 Exec=firefox http://localhost:8000
 Name=Open Firefox for NEMO
 Icon=' > ~/Desktop/firefox-nemo.desktop
